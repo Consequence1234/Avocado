@@ -44,4 +44,12 @@ $(document).ready(function(){
 	});
 });
 
+$(document).on('click', '.slider__addtofavorite', function () {
+	let id = $(this).hasClass('simple');
+    if (!id) {
+        $(this).addClass('simple');
+    } else {
+        $(this).removeClass('simple');
+    }
+});
 
