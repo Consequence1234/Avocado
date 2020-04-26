@@ -53,3 +53,6 @@ $(document).on('click', '.slider__addtofavorite', function () {
     }
 });
 
+
+
+   
