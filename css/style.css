@@ -31,7 +31,54 @@
   font-style: normal;
 }
 /*<Подключаем шрифты>===============================================================================================*/
-
+@font-face {
+  font-family: "Futura PT Book";
+  src: url("../fonts/futura_pt_book.eot");
+  src: local("☺"), url("../fonts/futura_pt_book.woff") format("woff"),
+    url("../fonts/futura_pt_book.ttf") format("truetype"), url("../fonts/futura_pt_book.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT Light";
+  src: url("../fonts/futura_pt_light.eot");
+  src: local("☺"), url("../fonts/futura_pt_light.woff") format("woff"),
+    url("../fonts/futura_pt_light.ttf") format("truetype"), url("../fonts/futura_pt_light.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT Medium";
+  src: url("../fonts/futura_pt_medium.eot");
+  src: local("☺"), url("../fonts/futura_pt_medium.woff") format("woff"),
+    url("../fonts/futura_pt_medium.ttf") format("truetype"), url("../fonts/futura_pt_medium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT Bold";
+  src: url("../fonts/futura_pt_bold.eot");
+  src: local("☺"), url("../fonts/futura_pt_bold.woff") format("woff"),
+    url("../fonts/futura_pt_bold.ttf") format("truetype"), url("../fonts/futura_pt_bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT Heavy";
+  src: url("../fonts/futura_pt_heavy.eot");
+  src: local("☺"), url("../fonts/futura_pt_heavy.woff") format("woff"),
+    url("../fonts/futura_pt_heavy.ttf") format("truetype"), url("../fonts/futura_pt_heavy.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT Extra Bold";
+  src: url("../fonts/futura_pt_extra_bold.eot");
+  src: local("☺"), url("../fonts/futura_pt_extra_bold.woff") format("woff"),
+    url("../fonts/futura_pt_extra_bold.ttf") format("truetype"), url("../fonts/futura_pt_extra_bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /*<Иконочные шрифты>===============================================================================================*/
 
 /*<Иконочные шрифты>===============================================================================================*/
@@ -909,7 +956,7 @@ p.slider__text {
   }
 }
 .fashion__news {
-  background-color: #e5e5e5;
+  background-color: #eee;
   border-top: 1px solid #1e1e1e;
   border-bottom: 1px solid #1e1e1e;
 }
@@ -1000,8 +1047,13 @@ p.slider__text {
 }
 
 .news__subscription {
-  margin: 40px 0 40px 0;
+  margin: 40px 0 60px 0;
   position: relative;
+}
+@media (max-width: 600px) {
+.news__subscription {
+  margin: 40px 0 0 0;
+ }
 }
 .subscription__bg{
   overflow: hidden;
@@ -1107,4 +1159,216 @@ form button:active {
 	background-image: linear-gradient(90deg, rgb(213, 174, 118) 0%, rgb(243, 220, 217) 100%);
   outline: none;
   transform: scale(1.02);
+}
+/*------------------Section News END --------------------*/
+
+.footer {}
+.social_payments{
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #eee;
+}
+@media (max-width: 600px) {
+  .social_payments {
+    display: none;
+  }
+}
+.social__link {
+  display: flex;
+  align-items: center;
+}
+.facebook-link {
+  display: inline-block;
+  background: url("../img/Facebook_icon.png") 0 0 no-repeat;
+  width: 16px;
+  height: 30px;
+  padding: 0 60px 0 0;
+}
+.facebook-link:hover {
+  background: url("../img/facebook-iconi.png") 0 0 no-repeat;
+}
+.instagram-link {
+  display: inline-block;
+  background: url("../img/instagram-icon.png") 0 0 no-repeat;
+  width: 29px;
+  height: 30px;
+  padding: 0 75px 0 0;
+}
+.instagram-link:hover {
+  background: url("../img/instagram-iconi.png 1.png") 0 0 no-repeat;
+  height: 29px;
+}
+.vk-link {
+  display: inline-block;
+  background: url("../img/VK_icon.png") 0 0 no-repeat;
+  width: 30px;
+  height: 30px;
+}
+.vk-link:hover {
+  background: url("../img/vk-iconi.png") 0 0 no-repeat;
+}
+.payments__logo {
+  display: inline-block;
+  margin: 20px 0 20px 50px;
+  padding: 0 0 0 50px;
+  border-left: 1px solid #999;
+}
+.payments-icon {
+  padding: 0 35px 0 0;
+}
+.payments-icon:last-child {
+  padding: 0;
+}
+
+
+
+
+.footer__info {
+  background-color: #eee;
+  font-size: .875rem;
+}
+@media (max-width: 767px) {
+  .footer__info {
+  background-color: #ffffff;  
+  }
+}
+.info__body {
+  display: flex;
+  padding: 32px;
+}
+@media (max-width: 767px) {
+  .info__body {
+    display: block;
+    padding: 10px 20px;
+  }
+}
+.det-row {
+ flex: 1 1 0%;
+ margin-left: 55px;
+}
+.det-row:first-child {
+ margin-left: 0px;
+}
+@media (max-width: 767px) {
+  .det-row {
+	margin: 20px auto;
+	box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1),
+		0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	background: #eee;
+	border-radius: 4px;
+	position: relative;
+  }
+}
+.sum-row {
+  color: #666;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0 0 15px 0;
+  font-family: "Futura PT Heavy";
+  pointer-events: none;
+ }
+ @media (max-width: 767px) {
+  .sum-row {
+    padding: 10px 0;
+    pointer-events: initial;
+  }
+ }
+.a-row {
+display: block;
+line-height: 30px;
+letter-spacing: .4px;
+color: #666;  
+font-family: "Futura PT Book";
+}
+@media (max-width: 767px) {
+  .a-row{
+    background: rgb(246, 246, 246);
+  }
+ }
+summary {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  outline-style: none;
+}
+@media (max-width: 767px) {
+  summary {
+  width: auto;
+  }
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.hov:hover {
+  color: #0770cf;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer__low {
+  width: 100%;
+  background-color: #ddd;
+  font-family: "Futura PT Book";
+  font-size: .75rem;
+}
+.low__body {
+ display: flex;
+ align-items: center;
+ height: 50px;
+ justify-content: space-between;
+ padding: 0 32px;
+}
+@media (max-width: 767px) {
+  .low__body {
+    padding: 0 10px;
+  }
+  .low-list li {
+    line-height: 25px;
+  }
+}
+.low__text {
+  color: #2d2d2d;
+  letter-spacing: .4px;
+  flex: 0 0 90px;
+}
+.low-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.low-list li {
+  position: relative;
+  display: inline-block;
+  padding-right: 6px;
+}
+.low-list li a{
+  color: #2d2d2d;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 100%;
+}
+.low-list li:not(:last-child):after {
+  content: '|';
+  display: inline;
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 767px) {
+  .low-list li:not(:last-child):after {
+    content: '';
+  }
+  .low-list li:last-child {
+    display: none;
+  }
 }

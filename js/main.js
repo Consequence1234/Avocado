@@ -54,5 +54,16 @@ $(document).on('click', '.slider__addtofavorite', function () {
 });
 
 
+var handleMatchMedia = function(mediaQuery) {
+	if (mediaQuery.matches) {
+		$('details').removeAttr('open'); 
+	}  else {
+		$('details').attr('open', 'open');
+	}
+},
+mql = window.matchMedia('(max-width: 767px)');
+handleMatchMedia(mql);
+mql.addListener(handleMatchMedia); 
 
-   
+
+
