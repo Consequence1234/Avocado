@@ -304,17 +304,17 @@ body {
   margin: 0 0 0 35px;
 }
 .facebook {
-  background: url("../img/Facebook_icon.png.svg") no-repeat;
+  background: url("../img/Facebook_icon.png.svg") 0 0 no-repeat;
   margin: 0 0 0 15px;
 }
 .instagram {
-  background: url("../img/instagram-iconi.png.svg") no-repeat;
+  background: url("../img/instagram-iconi.png.svg") 0 0 no-repeat;
 }
 .user {
-  background: url("../img/user1_114209 1.svg") no-repeat;
+  background: url("../img/user1_114209 1.svg") 0 0 no-repeat;
 }
 .cart {
-  background: url("../img/shopping_cart_icon_124391 1.svg") no-repeat;
+  background: url("../img/shopping_cart_icon_124391 1.svg") 0 0 no-repeat;
 }
 .social-img {
   width: 24px;
@@ -500,19 +500,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 130 0 0 0;
+    margin: 110px 0 0 0;
   }
   /*------------------JS выезжащие MENU и бэкграунд END--------------------*/
   .header__list li {
     margin: 0 0 25px 0;
   }
-  .header__list a {
-    font-size: 16px;
-  }
   .nav-btn {
-    padding: 10px 0;
-    width: 140px;
-    height: 36px;
+    padding: 8px 0;
+    width: 130px;
+    height: 30px;
+  }
+  .reg-profile {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0 0;
+  }
+  .text {
+    font-size: 14px;
   }
 }
 /*------------------Header End--------------------*/
@@ -1249,30 +1254,61 @@ form button:active {
 .det-row:first-child {
  margin-left: 0px;
 }
+[open].det-row  {
+  animation: fade 1s ease;
+}
+@keyframes fade {
+  0%   {opacity: 0.5;}
+  100% {opacity: 1;}
+}
 @media (max-width: 767px) {
   .det-row {
 	margin: 20px auto;
 	box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1),
-		0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	0 10px 10px -5px rgba(0, 0, 0, 0.04);
 	background: #eee;
 	border-radius: 4px;
-	position: relative;
   }
 }
+summary::-webkit-details-marker {
+  display: none;
+}
 .sum-row {
+  position: relative;
   color: #666;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 0 0 15px 0;
   font-family: "Futura PT Heavy";
   pointer-events: none;
+  outline-style: none;
  }
  @media (max-width: 767px) {
   .sum-row {
     padding: 10px 0;
     pointer-events: initial;
+    cursor: pointer;
+  }
+  .sum-row:before,
+  .sum-row:after {
+    content: '';
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    top: 20;
+    right: 10;
+    background-color: #666;
+    transform: translateY(-50%);
+    transition: transform .2s ease-in-out;
+  }
+  .sum-row:after {
+    transform: translateY(-50%) rotate(90deg);
+  }
+  [open] .sum-row:after{
+    transform: translateY(-50%) rotate(180deg);
   }
  }
+
 .a-row {
 display: block;
 line-height: 30px;
@@ -1285,32 +1321,10 @@ font-family: "Futura PT Book";
     background: rgb(246, 246, 246);
   }
  }
-summary {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  outline-style: none;
-}
-@media (max-width: 767px) {
-  summary {
-  width: auto;
-  }
-}
-summary::-webkit-details-marker {
-  display: none;
-}
-
+ 
 .hov:hover {
   color: #0770cf;
 }
-
-
-
-
-
-
-
-
 
 
 
