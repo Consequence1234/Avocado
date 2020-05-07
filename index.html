@@ -7,6 +7,7 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" media="all" href="css/animate.css">
 </head>
 <body>
   <div class="wrapper">
@@ -15,10 +16,10 @@
         <div class="head-info">
          <div class="social d-flex">
           <p class="text-p">Мы в социальных сетях</p>
-          <a class="facebook social-img social-hover" href=""></a>
-          <a class="instagram social-img social-hover" href=""></a>
+          <a class="facebook social-img" href=""></a>
+          <a class="instagram social-img" href=""></a>
          </div>
-         <div data-move="header__menu,1,767" class="reg-profile d-flex">
+         <div data-move="header__menu,1,769" class="reg-profile d-flex">
            <a class="user social-img social-hover" href=""></a>
            <a class="text" href="https://colorlib.com/etc/lf/Login_v17/index.html#">Зарегистрироваться / Войти</a>
          </div>
@@ -38,26 +39,26 @@
           <ul class="header__list header__list--horz">
             <li><a class="nav-btn" href="">Женщины</a>
               <ul class="header__list-child">
-                <li><a class="nav-btn" href="">Новинки</a></li>
-                <li><a class="nav-btn" href="">Одежда</a></li>
-                <li><a class="nav-btn" href="">Обувь</a></li>
-                <li><a class="nav-btn" href="">Спортивная одежда</a></li>
-                <li><a class="nav-btn" href="">Лицо и тело</a></li>
+                <li><a class="nav-btn__sub" href="">Новинки</a></li>
+                <li><a class="nav-btn__sub" href="">Одежда</a></li>
+                <li><a class="nav-btn__sub" href="">Обувь</a></li>
+                <li><a class="nav-btn__sub" href="">Спортивная одежда</a></li>
+                <li><a class="nav-btn__sub" href="">Лицо и тело</a></li>
               </ul>
             </li>
             <li><a class="header__link nav-btn" href="">Мужчины</a>
               <ul class="header__list-child">
-                <li><a class="nav-btn" href="">Новинки</a></li>
-                <li><a class="nav-btn" href="">Одежда</a></li>
-                <li><a class="nav-btn" href="">Обувь</a></li>
-                <li><a class="nav-btn" href="">Спортивная одежда</a></li>
+                <li><a class="nav-btn__sub" href="">Новинки</a></li>
+                <li><a class="nav-btn__sub" href="">Одежда</a></li>
+                <li><a class="nav-btn__sub" href="">Обувь</a></li>
+                <li><a class="nav-btn__sub" href="">Спортивная одежда</a></li>
               </ul>
             </li>
             <li><a class="nav-btn" href="">Дети</a></li>
             <li><a class="nav-btn" href="">Аксессуары</a></li>
             <li><a class="nav-btn" href="">Распродажа</a>
               <ul class="header__list-child">
-                <li><a class="nav-btn" href="">Аутлет</a></li>
+                <li><a class="nav-btn__sub" href="">Аутлет</a></li>
               </ul>
             </li>
           </ul>
@@ -66,11 +67,11 @@
       </div>
     </div>
     <div class="content">
-        <div class="main-image">
-        <img src="img/girl.jpg" alt="">
+        <div class="main-image fadeInLeft wow" data-wow-duration="1s" data-wow-offset="10">
+        <img  src="img/girl.jpg" alt="">
         </div>
-        <div class="models__title">Популярные модели</div>
-        <section class="slider">
+        <div class="models__title fadeInDown wow"  data-wow-offset="70">Популярные модели</div>
+        <section class="slider fadeInDown wow"  data-wow-offset="70">
           <div class="container container-slider">
             <div class="slider__body">
               <div class="slider__item">
@@ -118,8 +119,8 @@
             </div>
           </div>
         </section>
-        <div class="sale__title">Распродажа</div>
-        <section class="sale">
+        <div class="sale__title fadeInRight wow" data-wow-duration="1s" data-wow-offset="70">Распродажа</div>
+        <section class="sale fadeInRight wow" data-wow-duration="1s" data-wow-offset="70">
           <div class="container">
             <div class="sale__columns">
              <div class="sale__column-one">
@@ -133,8 +134,8 @@
             </div>
           </div>
          </section>
-         <div class="fashion__title">Модные бренды</div>
-        <section class="fashion__brand">
+         <div class="fashion__title fadeInUp wow">Модные бренды</div>
+        <section class="fashion__brand fadeInUp wow">
             <div class="fashion__body">
               <ul class="fashion__list">
                 <li><a href=""><img src="img/weekday (1).jpg" alt=""></a></li>
@@ -149,8 +150,8 @@
               <a href="">Бесплатные доставка и возврат товаров</a>
             </div>
         </section>
-        <div class="news__title">Модные советы</div>
-        <section class="fashion__news">
+        <div class="news__title fadeInLeft wow" data-wow-duration="1s" data-wow-offset="70">Модные советы</div>
+        <section class="fashion__news fadeInLeft wow" data-wow-duration="1s" data-wow-offset="70">
           <div class="container">
             <div class="news__body">
               <div class="news__text">
@@ -247,6 +248,8 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/wow.min.js"></script>
+<script>new WOW().init();</script>
 </body>
 </html>
 

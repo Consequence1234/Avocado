@@ -66,7 +66,7 @@ var handleMatchMedia = function(mediaQuery) {
 		$('details').attr('open', 'open'); //можно убрать т.к. в HTML прописан OPEN для Details.
 	}
 },
-mql = window.matchMedia('(max-width: 767px)');
+mql = window.matchMedia('(max-width: 768px)');
 handleMatchMedia(mql);
 mql.addListener(handleMatchMedia); 
 
@@ -143,3 +143,4 @@ $(window).resize(function(event) {
 dynamic_adaptive();
 });
 dynamic_adaptive();
+

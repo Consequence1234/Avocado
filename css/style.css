@@ -307,8 +307,14 @@ body {
   background: url("../img/Facebook_icon.png.svg") 0 0 no-repeat;
   margin: 0 0 0 15px;
 }
+.facebook:hover {
+  background: url("../img/Facebook-upper.png") 0 0 no-repeat;
+}
 .instagram {
   background: url("../img/instagram-iconi.png.svg") 0 0 no-repeat;
+}
+.instagram:hover {
+  background: url("../img/instagram-upper.png") 0 0 no-repeat;
 }
 .user {
   background: url("../img/user1_114209 1.svg") 0 0 no-repeat;
@@ -374,7 +380,7 @@ body {
   position: absolute;
   margin: 0;
   padding: 0;
-  width: 150px;
+  width: 100%;
   z-index: 1;
 }
 .header__list-child li {
@@ -382,12 +388,24 @@ body {
   display: block;
   margin: 10px 0 0 0;
 }
-.header__list-child li:nth-child(4) .nav-btn {
+.header__list-child li:nth-child(4) .nav-btn__sub {
   padding: 2px 0;
-  line-height: 16px;
-  height: 36px;
+  line-height: 14px;
+  height: 32px;
 }
-.header__list-child .nav-btn:hover {
+.nav-btn__sub {
+  display: block;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 5px 0;
+  width: 135px;
+  height: 24px;
+  text-align: center;
+  font-size: 13px;
+  transition: all 0.3s ease-out;
+}
+.header__list-child .nav-btn__sub:hover {
   background-color: #f5f5f5;
   color: #1e1e1e;
   box-shadow: none;
@@ -397,11 +415,11 @@ body {
   width: 100%;
 }
 .header__list--horz li:hover .header__list-child {
-  max-height: 250px;
+  max-height: 350px;
 }
 .header__list--horz .header__list-child {
   max-height: 0;
-  top: 42px;
+  top: 38px;
   left: 0;
   overflow: hidden;
   transition: max-height 0.4s linear;
@@ -409,13 +427,16 @@ body {
 
 @media (max-width: 992px) {
   .nav-btn {
-    width: 130px;
+    width: 140px;
+  }
+  .nav-btn__sub {
+    width: 125px;
   }
 }
 .header__burger {
   display: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   /*------------------JS LOCK от скрина меню в адаптиве--------------------*/
   body.lock {
     overflow: hidden;
@@ -524,12 +545,12 @@ body {
 .content {
 }
 .main-image {
-  margin: 30px 0 0 0;
+  margin: 20px 0 0 0;
   padding: 0 0 65% 0;
   overflow: hidden;
   position: relative;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .main-image {
     margin: 10px 0 0 0;
   }
@@ -596,7 +617,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .slider__icon {
     overflow: hidden;
     height: 465px;
@@ -1166,8 +1187,7 @@ form button:active {
   transform: scale(1.02);
 }
 /*------------------Section News END --------------------*/
-
-.footer {}
+/*------------------Footer--------------------*/
 .social_payments{
   display: flex;
   justify-content: center;
@@ -1191,6 +1211,7 @@ form button:active {
 }
 .facebook-link:hover {
   background: url("../img/facebook-iconi.png") 0 0 no-repeat;
+  transition: all 0.2s ease-out;
 }
 .instagram-link {
   display: inline-block;
@@ -1202,6 +1223,7 @@ form button:active {
 .instagram-link:hover {
   background: url("../img/instagram-iconi.png 1.png") 0 0 no-repeat;
   height: 29px;
+  transition: all 0.2s ease-out;
 }
 .vk-link {
   display: inline-block;
@@ -1211,6 +1233,7 @@ form button:active {
 }
 .vk-link:hover {
   background: url("../img/vk-iconi.png") 0 0 no-repeat;
+  transition: all 0.2s ease-out;
 }
 .payments__logo {
   display: inline-block;
@@ -1224,15 +1247,11 @@ form button:active {
 .payments-icon:last-child {
   padding: 0;
 }
-
-
-
-
 .footer__info {
   background-color: #eee;
   font-size: .875rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .footer__info {
   background-color: #ffffff;  
   }
@@ -1241,7 +1260,7 @@ form button:active {
   display: flex;
   padding: 32px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .info__body {
     display: block;
     padding: 10px 20px;
@@ -1255,13 +1274,13 @@ form button:active {
  margin-left: 0px;
 }
 [open].det-row  {
-  animation: fade 1s ease;
+  animation: fade .6s ease-in-out;
 }
 @keyframes fade {
   0%   {opacity: 0.5;}
   100% {opacity: 1;}
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .det-row {
 	margin: 20px auto;
 	box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1),
@@ -1283,7 +1302,7 @@ summary::-webkit-details-marker {
   pointer-events: none;
   outline-style: none;
  }
- @media (max-width: 767px) {
+ @media (max-width: 768px) {
   .sum-row {
     padding: 10px 0;
     pointer-events: initial;
@@ -1316,7 +1335,7 @@ letter-spacing: .4px;
 color: #666;  
 font-family: "Futura PT Book";
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .a-row{
     background: rgb(246, 246, 246);
   }
@@ -1325,9 +1344,6 @@ font-family: "Futura PT Book";
 .hov:hover {
   color: #0770cf;
 }
-
-
-
 
 .footer__low {
   width: 100%;
@@ -1342,7 +1358,7 @@ font-family: "Futura PT Book";
  justify-content: space-between;
  padding: 0 32px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .low__body {
     padding: 0 10px;
   }
@@ -1378,7 +1394,7 @@ font-family: "Futura PT Book";
   position: absolute;
   right: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .low-list li:not(:last-child):after {
     content: '';
   }
