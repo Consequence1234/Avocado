@@ -337,14 +337,20 @@ body {
 .header__body {
 }
 .header__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   margin: 10 0 0 0;
 }
 .header__logo img {
   max-width: 100%;
 }
+
+
+
+
+
+
+
+
 .header__menu {
   margin: 40px 0 0 0;
 }
@@ -359,6 +365,9 @@ body {
   color: #ffffff;
   text-transform: uppercase;
 }
+.header__list a.parent {
+ margin: 0 20px 0 0;
+}
 .nav-btn {
   display: block;
   background-color: #1e1e1e;
@@ -370,30 +379,35 @@ body {
   text-align: center;
   transition: all 0.3s ease-out;
 }
-.nav-btn:hover {
+body.mouse .nav-btn:hover {
   color: #1e1e1e;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.18);
   background-color: #f5f5f5;
   font-weight: 600;
+  display: block;
 }
 .header__list-child {
   position: absolute;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  top: 25px;
+  left: 0;
   z-index: 1;
+  display: none;
+  padding: 10px 0 0 0;
+  transition: all 0.4s linear;
 }
-.header__list-child li {
-  color: #f5f5f5;
+body.mouse .header__list li:hover .header__list-child  {
   display: block;
-  margin: 10px 0 0 0;
 }
-.header__list-child li:nth-child(4) .nav-btn__sub {
+.header__list-child>li {
+  color: #f5f5f5;
+  padding: 10px 0 0 0;
+}
+.header__list-child li:nth-child(4) .nav-btn.sub {
   padding: 2px 0;
   line-height: 14px;
   height: 32px;
 }
-.nav-btn__sub {
+.nav-btn.sub {
   display: block;
   background-color: #1e1e1e;
   color: #ffffff;
@@ -405,34 +419,56 @@ body {
   font-size: 13px;
   transition: all 0.3s ease-out;
 }
-.header__list-child .nav-btn__sub:hover {
+body.mouse .header__list-child .nav-btn.sub:hover {
   background-color: #f5f5f5;
   color: #1e1e1e;
   box-shadow: none;
   border: 1px dashed #1e1e1e;
+  display: block;
 }
-.header__list--horz {
-  width: 100%;
-}
-.header__list--horz li:hover .header__list-child {
-  max-height: 350px;
-}
-.header__list--horz .header__list-child {
-  max-height: 0;
-  top: 38px;
-  left: 0;
-  overflow: hidden;
-  transition: max-height 0.4s linear;
-}
+
+
 
 @media (max-width: 992px) {
   .nav-btn {
     width: 140px;
   }
-  .nav-btn__sub {
+  .nav-btn.sub {
     width: 125px;
   }
 }
+
+.menu__arrow {
+}
+.arrow {
+ display: none;
+ position: absolute;
+ right: -3px;
+ top: 0;
+ width: 0;
+ height: 0;
+ border-top: 10px solid #1e1e1e;
+ border-right: 10px solid transparent;
+ border-left: 10px solid transparent;
+}
+.arrow.active {
+  transform: rotate(-180deg);
+}
+
+body.touch .header__list-child.open {
+ display: block;
+}
+body.touch .arrow {
+  display: block;
+}
+
+
+
+
+
+
+
+
 .header__burger {
   display: none;
 }
@@ -443,9 +479,6 @@ body {
   }
   /*------------------JS LOCK от скрина меню в адаптиве END--------------------*/
   .head-info {
-    display: none;
-  }
-  .header__list-child {
     display: none;
   }
   .header__logo {
@@ -508,7 +541,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #eeeaee;
+    background: url("../img/dfgdg.jpg") center / cover no-repeat;
     overflow: auto;
     transition: all 0.7s linear;
     z-index: 2;
@@ -517,28 +550,41 @@ body {
   .header__menu.active {
     top: 0;
   }
+  /*------------------JS выезжащие MENU и бэкграунд END--------------------*/
   .header__list {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 110px 0 0 0;
+    margin: 120px 0 0 0;
   }
-  /*------------------JS выезжащие MENU и бэкграунд END--------------------*/
-  .header__list li {
-    margin: 0 0 25px 0;
+  .header__list>li {
+    margin: 0 0 20px 0;
+  }
+  .header__list a.parent {
+    margin: 0 20px;
+   }
+  .header__list-child {
+    position: relative;
+    top: 0;
+    left: 28;
+    padding: 0;
   }
   .nav-btn {
     padding: 8px 0;
     width: 130px;
     height: 30px;
   }
+  .nav-btn.sub {
+    width: 110px;
+    background-color: rgb(78, 78, 77);
+  }
   .reg-profile {
     display: flex;
     justify-content: center;
-    margin: 30px 0 0 0;
+    margin: 55px 0 0 0;
   }
   .text {
-    font-size: 14px;
+    font-size: 15px;
+    color: black;
   }
 }
 /*------------------Header End--------------------*/
