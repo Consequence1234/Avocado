@@ -35,7 +35,7 @@ $(document).ready(function(){
 				}
 			},
 			{
-				breakpoint: 631,
+				breakpoint: 430,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -172,3 +172,15 @@ if(isMobile.any()){
 }else{
 	body.classList.add('mouse');
 }
+
+//Адаптив картинок + IE11 - выдает img через background//
+function ibg(){
+	$.each($('.ibg'), function(index, val) {
+	  if($(this).find('img').length>0){
+	   $(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
+	   }
+	  });
+	}
+	ibg();
+	
+	
