@@ -16,16 +16,17 @@
         <div class="head-info">
          <div class="social d-flex">
           <p class="text-p">Мы в социальных сетях</p>
-          <a class="facebook social-img" href=""></a>
-          <a class="instagram social-img" href=""></a>
+          <a class="facebook social-img" href="#"></a>
+          <a class="instagram social-img" href="#"></a>
          </div>
-         <div data-move="header__menu,1,769" class="reg-profile d-flex">
-           <a class="user social-img social-hover" href=""></a>
-           <a class="text" href="">Регистрация / Войти</a>
+         <div data-da="header__menu,1,769" class="reg-profile d-flex">
+           <div class="user social-img"></div>
+           <a class="text" href="#" data-modal="#login">Войти</a>
+           <a class="text text-reg" href="#" data-modal="#registration">Регистрация</a>
          </div>
          <div class="shopping-cart d-flex">
-           <a class="cart social-img social-hover" href=""></a>
-           <a class="text" href="">Корзина (0)</a>
+           <div class="cart social-img"></div>
+           <a class="text" href="#">Корзина (0)</a>
          </div>
        </div>
        <div class="header__logo">
@@ -37,31 +38,31 @@
          </div>
          <nav class="header__menu">
           <ul class="header__list">
-            <li><a class="nav-btn" href="">Женщины</a>
+            <li><a class="nav-btn" href="#">Женщины</a>
               <span class="menu__arrow arrow"></span>
               <ul class="header__list-child">
-                <li><a class="nav-btn sub" href="">Новинки</a></li>
-                <li><a class="nav-btn sub" href="">Одежда</a></li>
-                <li><a class="nav-btn sub" href="">Обувь</a></li>
-                <li><a class="nav-btn sub" href="">Спортивная одежда</a></li>
-                <li><a class="nav-btn sub" href="">Лицо и тело</a></li>
+                <li><a class="nav-btn sub" href="#">Новинки</a></li>
+                <li><a class="nav-btn sub" href="#">Одежда</a></li>
+                <li><a class="nav-btn sub" href="#">Обувь</a></li>
+                <li><a class="nav-btn sub" href="#">Спортивная одежда</a></li>
+                <li><a class="nav-btn sub" href="#">Лицо и тело</a></li>
               </ul>
             </li>
-            <li><a class="header__link nav-btn" href="">Мужчины</a>
+            <li><a class="header__link nav-btn" href="#">Мужчины</a>
               <span class="menu__arrow arrow"></span>
               <ul class="header__list-child">
-                <li><a class="nav-btn sub" href="">Новинки</a></li>
-                <li><a class="nav-btn sub" href="">Одежда</a></li>
-                <li><a class="nav-btn sub" href="">Обувь</a></li>
-                <li><a class="nav-btn sub" href="">Спортивная одежда</a></li>
+                <li><a class="nav-btn sub" href="#">Новинки</a></li>
+                <li><a class="nav-btn sub" href="#">Одежда</a></li>
+                <li><a class="nav-btn sub" href="#">Обувь</a></li>
+                <li><a class="nav-btn sub" href="#">Спортивная одежда</a></li>
               </ul>
             </li>
-            <li><a class="nav-btn" href="">Дети</a></li>
-            <li><a class="nav-btn" href="">Аксессуары</a></li>
-            <li><a class="nav-btn" href="">Распродажа</a>
+            <li><a class="nav-btn" href="#">Дети</a></li>
+            <li><a class="nav-btn" href="#">Аксессуары</a></li>
+            <li><a class="nav-btn" href="#">Распродажа</a>
               <span class="menu__arrow arrow"></span>
               <ul class="header__list-child">
-                <li><a class="nav-btn sub" href="">Аутлет</a></li>
+                <li><a class="nav-btn sub" href="#">Аутлет</a></li>
               </ul>
             </li>
           </ul>
@@ -184,8 +185,8 @@
               <p>Подпишись на наши новости</p>
               <form action="#" method="GET" class="registration-form">
                 <label for="" class="col-one">
-                <input type="email" name="email" value="" placeholder="Ваш e-mail">
-                <button type="submit">Подписаться</button>
+                <input class="sumitInput" type="email" name="email" value="" placeholder="Ваш e-mail">
+                <button class="submitBtn" type="submit">Подписаться</button>
                 </label>
              </form>
         </div>
@@ -254,8 +255,125 @@
           </div>
         </div>
     </div>
+    <div class="modal fadeIn wow" id="login">
+      <div class="login_modal">
+        <button class="modal__close" type="button" title="Закрыть" data-close></button>
+        <p class="modal__title">Вход:</p>
+        <p class="modal__text">Пожалуйста,заполните форму, чтобы войти в персональный аккаунт на www.avocado.ru</p>
+        <div class="social__authform">
+          <ul class="social__list">
+            <li><a class="odnoklassniki-authform" href="" title="Одноклассники"><img src="img/ok-auth.png" alt=""></a></li>
+            <li><a class="vkontakte-authform" href="" title="Вконтакте"><img src="img/vk_auth.png" alt=""></a></li>
+            <li><a class="facebook-authform" href="" title="Facebook"><img src="img/fb_auth.png" alt=""></a></li>
+        </div>
+            <form class="login__form form" method="get">
+              <div class="formItem">
+                <label class="Email">
+                  <span class="label-text">E-mail:</span>
+                  <input type="text" name="email">
+                </label>
+              </div>
+              <div class="formItem">
+                <label class="Password">
+                  <span class="label-text">Пароль:</span>
+                  <input type="password" name="password">
+                </label>
+              </div>
+              <div class="formBtn">
+                <button type="submit" class="yellowBtn">Войти</button>
+              </div>
+              <div class="formAdditional">
+                <label class="Checkbox">
+                  <input type="checkbox" name="user_remember" class="chk">
+                  <i></i>
+                  Не выходить из системы
+                  <div class="password_remember"><a href="">Забыли пароль?</a></div>
+                  <div class="registration_popUp"><a href="">Регистрация</a></div>
+                </label>
+              </div>
+            </form>
+          </ul>
+      </div>
+    </div>
+    <div class="modal fadeIn wow" id="registration">
+      <div class="registration_modal">
+        <button class="modal__close" type="button" title="Закрыть" data-close></button>
+        <p class="modal__title">Регистрация:</p>
+        <p class="modal__text">Пожалуйста, заполните форму, чтобы зарегистрировать персональный аккаунт на www.avocado.ru</p>
+            <form class="registration__form form" method="get">
+              <div class="formItem">
+                <label class="Surname">
+                  <span class="label-text">Фамилия:</span>
+                  <input type="text" name="surname">
+                </label>
+              </div>
+              <div class="formItem">
+                <label class="Name">
+                  <span class="label-text">Имя<sup>*</sup>:</span>
+                  <input type="text" name="name">
+                </label>
+              </div>
+              <div class="formItem">
+                <label class="middle-name">
+                  <span class="label-text">Отчество:</span>
+                  <input type="text" name="middle-name">
+                </label>
+              </div>
+              <div class="formItem radio">
+                <label class="gender">
+                  <span class="label-text">Пол:</span>
+                  <div class="radiobuttons">
+                    <input type="radio" value="1" name="radiogender">
+                    <i></i>
+                    Мужской
+                  </div>
+                </label>
+                <label class="gender">
+                  <div class="radiobuttons">
+                  <input type="radio" value="2" name="radiogender">
+                  <i></i>
+                    Женский
+                  </div>
+                </label>
+              </div>
+              <div class="formItem">
+                <label class="Email">
+                  <span class="label-text">E-mail<sup>*</sup>:</span>
+                  <input type="text" name="email">
+                </label>
+                <label class="Checkbox subs">
+                  <input type="checkbox" name="subscribe" class="chk">
+                  <i></i>
+                  Подписаться на рассылку по E-mail
+                </label>
+              </div>
+              <div class="formItem">
+                <label class="Phone">
+                  <span class="label-text">Телефон<sup>*</sup>:</span>
+                  <input type="text" name="phone" placeholder="+7 (___) ___-__-__">
+                </label>
+              </div>
+              <div class="formItem">
+                <label class="Password">
+                  <span class="label-text">Пароль<sup>*</sup>:</span>
+                  <input type="password" name="password">
+                </label>
+              </div>
+              <div class="formItem">
+                <label class="Password">
+                  <span class="label-text">&nbsp;</span>
+                  <input type="password" name="password" placeholder="Повторите пароль">
+                </label>
+              </div>
+              <div class="formBtn">
+                <button type="submit" class="yellowBtn">Создать</button>
+              </div>
+            </form>
+          </ul>
+      </div>
+    </div>
   </div>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/wow.min.js"></script>
