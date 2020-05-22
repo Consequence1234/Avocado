@@ -1491,8 +1491,13 @@ body.modal_lock {
 
 .formBtn {
  display: inline-block;
- padding: 0 15px 20px 85px;
+ padding: 0 15px 20px 89px;
  vertical-align: top;
+}
+@media (max-width: 460px) {
+  .formBtn {
+    padding: 0 15px 20px 85px;
+  }
 }
 .yellowBtn {
   font-family: inherit;
@@ -1598,4 +1603,41 @@ body.modal_lock {
   .subs {
     left: 0;
   }
+}
+
+.Offer {
+  display: flex;
+  line-height: 18px;
+}
+.Offer span {
+  width: 81px;
+}
+@media (max-width: 380px) {
+  .Offer span {
+    width: auto;
+  }
+}
+.Offer div {
+  position: relative;
+  margin: 8px;
+  flex: 1 0;
+}
+@media (max-width: 460px) {
+  .Offer div {
+    margin: 8px 0;
+    left: 5px;
+  }
+}
+@media (max-width: 380px) {
+  .Offer div {
+    margin: 8px 0;
+    left: 0px;
+  }
+}
+.offer-link {
+  color: #565656;
+  text-decoration: underline;
+}
+.btn-sub {
+  padding: 10px 15px 20px 85px;
 }
