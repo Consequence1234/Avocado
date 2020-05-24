@@ -523,6 +523,7 @@ body.touch .arrow {
   .header__burger.active span {
     transform: scale(0);
   }
+  
   /*------------------BURGER END--------------------*/
   /*------------------JS выезжащие MENU и бэкграунд--------------------*/
   .header__menu {

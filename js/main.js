@@ -18,6 +18,7 @@ $(document).ready(function(){
 		speed: 1300,
 		easing:`ease`,
 		infinite: true,
+		touchThreshold: 100,
 		responsive: [
 			{
 				breakpoint: 1200,
