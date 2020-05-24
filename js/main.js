@@ -15,10 +15,10 @@ $(document).ready(function(){
 		adaptiveHeight: true,
 		slidesToShow: 4,
 		slidesToScroll: 2,
-		speed: 1300,
-		easing:`ease`,
+		speed: 700,
+		easing:`linear`,
 		infinite: true,
-		touchThreshold: 10,
+		touchThreshold: 15,
 		responsive: [
 			{
 				breakpoint: 1200,
