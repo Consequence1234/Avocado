@@ -229,10 +229,6 @@ let isMobile = {
 	Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
 	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
 };
-if(isMobile.any()){
-	myMap.behaviors.disable('scrollZoom');
-	myMap.behaviors.disable('drag');
-}
 		let body=document.querySelector('body');
 if(isMobile.any()){
 		body.classList.add('touch');
@@ -251,7 +247,6 @@ if(isMobile.any()){
 }else{
 	body.classList.add('mouse');
 }
-
 
 //Адаптив картинок + IE11 - выдает img через background//
 function ibg(){
